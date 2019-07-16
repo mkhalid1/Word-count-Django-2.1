@@ -1,0 +1,14 @@
+<h1>Counts Page</h1>
+
+<a href="{% url 'home' %}">Home</a>
+
+<h3>Your Text: </h3>
+{{text}}
+<h3>Number of words:</h3>
+{{words}}
+<h3> Word Frequency:</h3>
+
+{% for word,count in word_dict %}
+{{word}} : {{count}}
+<br>
+{% endfor %}
